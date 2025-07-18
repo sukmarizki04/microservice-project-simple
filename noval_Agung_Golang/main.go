@@ -1,4 +1,3 @@
-package main
 
 import (
 	"fmt"
@@ -53,22 +52,21 @@ func main() {
 	fmt.Scanln(&input)
 
 	//Menggunakan fungsi fmt.scanln()
-	/*Fungsi ini mengcapture semua karakter sebelum user menekan tombol enter 	
-	lalu menyimpannya pada variabel kode diatas merupakan skema fungsi fmt.scanln fungsi tesebut 
-	bisa menampung tipe data bertipe interface berjumlah tak terbatas.tiap parameter akan menampung karakter karakter 
-	inputan user yang sudah dipisahkan dengan tanda spasi agar lebih jelas silahkan perhatikan contoh berikut 
+	/*Fungsi ini mengcapture semua karakter sebelum user menekan tombol enter
+	lalu menyimpannya pada variabel kode diatas merupakan skema fungsi fmt.scanln fungsi tesebut
+	bisa menampung tipe data bertipe interface berjumlah tak terbatas.tiap parameter akan menampung karakter karakter
+	inputan user yang sudah dipisahkan dengan tanda spasi agar lebih jelas silahkan perhatikan contoh berikut
 	*/
-	var  s2, s3, s4 string
-	fmt.Scanln(&s2,&s3,&s4)
-
+	var s2, s3, s4 string
+	fmt.Scanln(&s2, &s3, &s4)
 
 	fmt.Println(s2)
 	fmt.Println(s3)
 	fmt.Println(s4)
-	//Penerapan chanel berbentuk variabel, dibuat dengan kombinasi keyword make dan chan 
+	//Penerapan chanel berbentuk variabel, dibuat dengan kombinasi keyword make dan chan
 	/*Program berikut adalah contoh implementasi chanel. 3buah goroutine dieksekusi, dimasing-masing goroutine
-	
-	terdapat proses pengiriman lewat chanel. kesemua data tersebut nantinya diterima oleh goroutine utama yaitu proses 
+
+	terdapat proses pengiriman lewat chanel. kesemua data tersebut nantinya diterima oleh goroutine utama yaitu proses
 	proses yang dijalankan ddidalam fungsi blok main().
 	*/
 }
