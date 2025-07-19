@@ -30,3 +30,55 @@ func validate(input string) (bool, error) {
 	}
 	return true, nil
 }
+
+func catch() {
+	if r := recover(); r != nil {
+		fmt.Println("error occured", r)
+	} else {
+		fmt.Println("Application running perfecly ")
+	}
+}
+
+func mainFunction() {
+	defer catch()
+
+	var name string
+	fmt.Printf("Type your name: ")
+	fmt.Scanln(&name)
+	if valid, err := validate(name); valid {
+		fmt.Println("halo", name)
+	} else {
+		fmt.Println(err.Error())
+		panic(err.Error())
+	}
+}
+
+// memanfaatkan error pada IIFE
+func ExampleMain() {
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("Panic Occured ", r)
+		} else {
+			fmt.Println("Application Running Perfecly")
+		}
+	}()
+	panic("some error happen")
+}
+
+// perulangan panic dan error
+func mainFungcion() {
+	data := []string{"superman", "aquaman", "wonder woman"}
+	for _, each := range data {
+		func() {
+			defer func() {
+				if r := recover(); r != nil {
+					fmt.Println("Panic occured on looping ", each, "| message:")
+				} else {
+					fmt.Println("Application running perfecly")
+				}
+			}()
+			panic("some error happen")
+
+		}()
+	}
+}
