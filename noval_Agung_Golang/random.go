@@ -12,5 +12,5 @@ func random() {
 	fmt.Println("random ke 2:", ranomizer.Int())
 	fmt.Println("random ke 3:", ranomizer.Int())
 
-	/*S*/
+	/*S*
 }
