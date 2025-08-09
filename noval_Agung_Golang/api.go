@@ -2,6 +2,7 @@ package novalagunggolang
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 )
 
@@ -30,5 +31,12 @@ func user(w http.ResponseWriter, r *http.Request) {
 		w.Write(result)
 		return
 	}
+
 	http.Error(w, " ", http.StatusBadRequest)
+}
+
+func name(age int) {
+	if age == 0 {
+		return fmt.Append()
+	}
 }
