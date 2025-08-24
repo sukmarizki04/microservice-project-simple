@@ -40,6 +40,21 @@ func user(w http.ResponseWriter, r *http.Request) {
 	http.Error(w, " ", http.StatusBadRequest)
 }
 
+func userq(w http.ResponseWriter, r *http.Request) {
+
+	w.Header().Set("Content-Type", "application/json")
+	if r.Method == "GET" {
+		var result, err = json.Marshal(data)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+		w.Write(result)
+		return
+	}
+
+	http.Error(w, " ", http.StatusBadRequest)
+}
 func name(age int) {
 	if age == 0 {
 		return fmt.Append()
