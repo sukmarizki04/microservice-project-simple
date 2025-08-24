@@ -19,6 +19,11 @@ var data = []student{
 	student{"e002", "EDO", 45},
 }
 
+type T struct {
+	name  string // name of the object
+	value int    // its value
+}
+
 func user(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json")
